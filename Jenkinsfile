@@ -3,12 +3,12 @@ pipeline {
     agent any  // Use any available agent
 
     tools {
-        maven 'Maven'  // Ensure this matches the name configured in Jenkins
+        maven 'maven'  // Ensure this matches the name configured in Jenkins
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/Hemavathipcse/MyMavenJenkinsPipeline.git'
+                git branch: 'master', url: 'https://github.com/PRAJWAL9480/mav123.git'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
         stage('Run Application') {
             steps {
                 // Start the JAR application
-                sh 'java -jar target/MyMavenJenkinsPipeline-1.0-SNAPSHOT.jar'
+                sh 'java -jar target/MyMavenApp1-1.0-SNAPSHOT.jar'
             }
         }
 
